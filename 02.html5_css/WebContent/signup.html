@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<!-- css internal -->
+<style type="text/css">
+.content {
+    display: table;
+    width: 40%;
+    margin: auto;
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+}
+div.content {
+	text-align: center;
+	padding: 5px 0;
+}
+
+dt {
+	display: table-cell;
+	width: 29%;
+	height: 39px;
+	background-color: #f4f4f4;
+	color: #454545;
+	font-size: 13px;
+	font-weight: bold;
+	text-indent: 10px;
+	vertical-align: middle;
+}
+dd {
+	display: table-cell;
+	width: 69%;
+	height: 39px;
+	font-size: 12px;
+	text-indent: 10px;
+	vertical-align: middle;
+	color: #454545;
+	font-size: 13px;
+}
+.txt1 {
+	width: 70%;
+}
+
+.txt2 {
+	width: 95%;
+}
+
+.txt3 {
+	width: 29%;
+}
+
+input[type="text"], input[type="password"] {
+	border: 1px solid #e2e2e2;
+	height: 28px;
+	line-height: 28px;
+	color: #666;
+	text-indent: 10px;
+}
+
+input[type="submit"], input[type="reset"] {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	margin: 0 5px;
+	height: 33px;
+	line-height: 33px;
+	font-size: 14px;
+}
+input[type="button"] {
+	background-color: #666666;
+	border: 1px solid #575757;
+	color: #FFFFFF;
+	width: 23%;
+	height: 30px;
+}
+input[type="submit"] {
+	background: #ff7a1f;
+	color: #fff;
+	border: 1px solid #e45a01!important;
+}
+
+input[type="reset"] {
+	background: #aaa;
+	color: #fff;
+	border: 1px solid #999!important;
+}
+select {
+	height: 30px;
+}
+</style>
+</head>
+<body>
+	<!-- header menu -->
+	<div>
+		<a href="index.html"><img src="./img/logo.png" alt="로고" title="Go Home"></a>
+	</div>
+	<hr>
+	<div>
+		<a href="login.html">로그인</a> | <a href="signup.html">회원가입</a> | <a href="img_slide.html">이미지 슬라이드</a> | <a href="">아이디/비밀번호 찾기</a>
+	</div>
+	<hr>
+
+	<!-- content -->
+	<h3>회원가입</h3>
+	<form action="result.jsp" method="post">
+		<!-- 아이디 : 식별키 -->
+		<dl class="content">
+			<dt>아이디 *</dt>
+			<dd>
+				<input type="text" class="txt1" name="memberId" placeholder="아이디 또는 이메일" required autofocus>
+				<!-- 아이디 중복확인 -->
+				<input type="button" value="중복확인">
+			</dd>
+		</dl>
+		<!-- 비밀번호 -->
+		<dl class="content">
+			<dt>비밀번호 *</dt>
+			<dd>
+				<input type="password" class="txt2" name="memberPw" placeholder="비밀번호" required>
+			</dd>
+		</dl>
+		<!-- 비밀번호 확인 -->
+		<dl class="content">
+			<dt>비밀번호 확인 *</dt>
+			<dd>
+				<input type="password" class="txt2" name="memberPwCheck" placeholder="비밀번호 확인" required>
+			</dd>
+		</dl>
+		<!-- 이름 -->
+		<dl class="content">
+			<dt>이름 *</dt>
+			<dd>
+				<input type="text" class="txt2" name="memberName" placeholder="이름" required>
+			</dd>
+		</dl>
+		<!-- 휴대폰 -->
+		<dl class="content">
+			<dt>휴대폰 *</dt>
+			<dd>
+				<select class="txt3" name="moblie1">
+					<option>010</option>
+					<option>011</option>
+					<option>016</option>
+					<option>017</option>
+					<option>018</option>
+					<option>019</option>
+				</select>&nbsp;-
+				<input type="text" class="txt3" name="moblie2" placeholder="1234" required>&nbsp;-
+				<input type="text" class="txt3" name="moblie3" placeholder="5678" required>
+			</dd>
+		</dl>
+		<!-- 이메일 -->
+		<dl class="content">
+			<dt>이메일 *</dt>
+			<dd>
+				<input type="text" class="txt3" name="email1" required>@<input type="text" class="txt3" name="email2" required>&nbsp;
+				<select class="txt3" name="emailAddress">
+					<option>직접입력</option>
+					<option>naver.com</option>
+					<option>gmail.com</option>
+					<option>daum.net</option>
+					<option>empal.com</option>
+				</select>
+			</dd>
+		</dl>
+		<!-- 가입일 -->
+		<dl class="content">
+			<dt>가입일</dt>
+			<dd>
+				<input type="date" class="txt2" name="entryDate">
+			</dd>
+		</dl>
+		<!-- 회원 등급 -->
+		<dl class="content">
+			<dt>등급</dt>
+			<dd>
+				<input type="radio" name="grade" value="G" checked>일반회원&nbsp;&nbsp;
+				<input type="radio" name="grade" value="S">우수회원&nbsp;&nbsp;
+				<input type="radio" name="grade" value="A">관리자
+			</dd>
+		</dl>
+		<!-- 마일리지 -->
+		<dl class="content">
+			<dt>마일리지</dt>
+			<dd>
+				<input type="number" class="txt2" name="mileage">
+			</dd>
+		</dl>
+		<!-- 담당자 -->
+		<dl class="content">
+			<dt>담당자</dt>
+			<dd>
+				<select class="txt2" name="manager">
+					<option>박준혁</option>
+					<option>손보석</option>
+					<option>이예정</option>
+					<option>오지홍</option>
+				</select>
+			</dd>
+		</dl>
+		<div class="content">
+			<input type="submit" value="회원가입">
+			<input type="reset" value="취소">
+		</div>
+	</form>
+
+	<!-- footer -->
+</body>
+</html>

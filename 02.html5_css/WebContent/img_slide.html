@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이미지 슬라이드</title>
+<!-- css external -->
+<link type="text/css" rel="stylesheet" href="./css/common.css">
+<!-- css internal -->
+<style type="text/css">
+	img.slide {
+		width: 100px;
+		height: 120px;
+	}
+	img.slide:hover {
+		border: solid 3px red;
+		width: 150px;
+		height: 180px;
+	}
+</style>
+</head>
+<body>
+	<!-- header menu -->
+	<div>
+		<a href="index.html"><img src="./img/logo.png" alt="로고" title="Go Home"></a>
+	</div>
+	<hr>
+	<div>
+		<a href="login.html">로그인</a> | <a href="signup.html">회원가입</a> | <a href="img_slide.html">이미지 슬라이드</a> | <a href="">아이디/비밀번호 찾기</a>
+	</div>
+	<hr>
+	
+	<!-- 
+		## CSS (Cascading Style Sheet)
+		-- 화면의 표현을 담당
+		-- 글꼴, 크기, 생상, 배치 등
+		
+		## 적용위치
+		1. inline : 태그 적용 / 권장하지 않음, 간단한 테스트, 오픈소스 라이브러리(Bootstrap) 추가 작업시 충돌 해결
+		2. internal : 현재 html 페이지 적용 / 다른 페이지는 적용 안됨, 선호
+		3. external : 별도의 css 파일로 분리 설계 => 필요한 html에서 링크 사용 / 표준화, 권장
+		4. import : 별도의 css 파일을 import 시킨 후 => 현재 html 문서에서 재정의, 추가 정의 사용 / internal과 external의 결합
+		
+		## css 선언 형식
+		선택자 {
+			속성명 : 속성값;
+			속성명 : 속성값;
+			...
+		}
+		
+		## css 관련 태그 속성
+		-- id="유일한 key"
+		-- class="grouping"
+		
+		## css 관련 태그
+		-- <div></div> : block level tag, 라인 이동 발생
+		-- <span></span> : inline level tag, 라인 이동 없음
+		
+		## 선택자(Selector)
+		* : 전체 선택
+		.클래스명 : 해당 클래스 선택
+		#아이디명 : 해당 아이디를 갖는 Node 선택
+		태그명 : 해당 모든 태그 선택
+		태그명.클래스명 : 해당 태그의 지정한 클래스 태그만 선택
+		
+		부모태그명 > 자식태그명 : 자식 태그 선택
+		조상태그명 자식태그명 : 후손 태그 선택
+		태그명1, 태그명2 : 다중 선택자, 태그명1 또는 태그명2 선택
+		
+		## 속성선택자
+		태그명[속성명]
+		태그명[속성명="속성값"]
+		
+		Java 클래스 모델링 - 표준화 / 공통 기능 - 부모 클래스 / 다른 기능 구현 - 재정의, override 
+	 -->
+	
+	<h3>이미지 예제</h3><!-- alt : 엑박 대신에 나올 문자 title : 마우스 오버시 정보 -->
+	<img class="slide" src="./img/butterfly-01.png" alt="나비01" title="나비01">
+	<img class="slide" src="./img/butterfly-02.png" alt="나비02" title="나비02">
+	<img class="slide" src="./img/butterfly-02.png" alt="나비03" title="나비03">
+	<img class="slide" src="./img/butterfly-04.png" alt="나비04" title="나비04">
+	<img class="slide" src="./img/butterfly-05.png" alt="나비05" title="나비05">
+	<img class="slide" src="./img/butterfly-06.png" alt="나비06" title="나비06">
+	<img class="slide" src="./img/butterfly-07.png" alt="나비07" title="나비07">
+	<img class="slide" src="./img/butterfly-08.png" alt="나비08" title="나비08">
+	<img class="slide" src="./img/butterfly-09.png" alt="나비09" title="나비09">
+	<img class="slide" src="./img/butterfly-10.png" alt="나비10" title="나비10">
+</body>
+</html>
